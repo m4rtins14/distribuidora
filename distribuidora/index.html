@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Mercado App</h1>
+    <div id="scanner">
+        <h2>Leitor de Código de Barras</h2>
+        <button onclick="startScanner()">Iniciar Câmera</button>
+        <button onclick="stopScanner()">Parar Câmera</button>
+        <div id="videoContainer">
+            <video id="video" width="300" height="200"></video>
+        </div>
+    </div>
+    <div id="cart">
+        <h2>Carrinho</h2>
+        <ul id="cartList"></ul>
+        <h3>Total: R$<span id="totalPrice">0.00</span></h3>
+    </div>
+    <div id="addProduct">
+        <h2>Cadastrar Produto</h2>
+        <form id="productForm">
+            <input type="text" id="productName" placeholder="Nome do Produto" required>
+            <input type="number" id="productPrice" placeholder="Preço" required>
+            <input type="text" id="productBarcode" placeholder="Código de Barras" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+    <script src="https://unpkg.com/quagga/dist/quagga.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
